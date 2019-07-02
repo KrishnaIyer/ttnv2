@@ -1,0 +1,5 @@
+keys/
+data/
+config/
+docker-compose.yml
+!templates/docker-compose.yml

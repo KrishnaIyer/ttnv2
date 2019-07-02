@@ -1,0 +1,14 @@
+id: NETWORKID-handler
+tls: true
+key-dir: /root/keys
+auth-servers:
+  ttn-account-v2: "https://account.thethingsnetwork.org"
+
+discovery-address: "discovery:1900"
+auth-token: TOKEN
+
+handler:
+  redis-address:  redis:6379
+  server-address-announce: handler.NETWORKSERVERDOMAIN
+  broker-id: NETWORKID-broker
+  mqtt-address: mosquitto:1883

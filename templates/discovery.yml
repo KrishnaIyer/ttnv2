@@ -1,0 +1,12 @@
+id: NETWORKID-discovery
+tls: true
+key-dir: /root/keys
+auth-servers:
+  ttn-account-v2: "https://account.thethingsnetwork.org"
+  local: file:///root/keys/server.pub
+
+discovery:
+  redis-address:  redis:6379
+  master-auth-servers:
+  - ttn-account-v2
+  - local

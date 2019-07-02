@@ -1,0 +1,8 @@
+id: NETWORKID-networkserver
+tls: true
+key-dir: /root/keys
+auth-servers:
+  ttn-account-v2: "https://account.thethingsnetwork.org"
+networkserver:
+  redis-address: redis:6379
+
