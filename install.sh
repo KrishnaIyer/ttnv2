@@ -8,6 +8,7 @@ function init(){
   cp ./templates/bridge.env $1/config/bridge.env
   sed -i "" "s/NETWORKID/$2/g" $1/config/bridge.env
   cp ./templates/docker-compose.yml $1/docker-compose.yml
+  sed -i "" "s/NETWORKSERVERDOMAIN/$3/g" $1/docker-compose.yml
 }
 
 
@@ -43,7 +44,7 @@ then
 fi
 
 # Preparation
-init $ROOT $NETWORK_ID
+init $ROOT $NETWORK_ID $NETWORK_SERVER_DOMAIN
 
 # Generating Certificates
 echo "Generating routing certificates..."

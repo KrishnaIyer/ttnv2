@@ -27,7 +27,7 @@ services:
     networks:
       default:
         aliases:
-          - discovery.local.thethings.network
+          - discovery.NETWORKSERVERDOMAIN
     ports:
       - "1900:1900"
       - "8081:8080"
@@ -43,7 +43,7 @@ services:
     networks:
       default:
         aliases:
-          - router.local.thethings.network
+          - router.NETWORKSERVERDOMAIN
     ports:
       - "1901:1901"
     volumes:
@@ -65,7 +65,7 @@ services:
     networks:
       default:
         aliases:
-          - broker.local.thethings.network
+          - broker.NETWORKSERVERDOMAIN
     ports:
       - "1902:1902"
     volumes:
@@ -84,7 +84,7 @@ services:
     networks:
       default:
         aliases:
-          - networkserver.local.thethings.network
+          - networkserver.NETWORKSERVERDOMAIN
     ports:
       - "1903:1903" # Note: you should not expose this port in production environments
     volumes:
@@ -101,7 +101,7 @@ services:
     networks:
       default:
         aliases:
-          - handler.local.thethings.network
+          - handler.NETWORKSERVERDOMAIN
     ports:
       - "1904:1904"
       - "8084:8084"
