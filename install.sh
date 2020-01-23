@@ -72,6 +72,9 @@ do
   sed -i "" "s/TOKEN/$token/g" $ROOT/config/$component.yml
 done
 
+# Register DevAddr prefix
+docker-compose run --rm broker broker register-prefix 26000000/20 > /dev/null || fail "Could not register TTN prefixes"
+
 # Bridge Settings
 cp ./templates/bridge.env $ROOT/config/bridge.env
 sed -i "" "s/NETWORKID/$NETWORK_ID/g" $ROOT/config/bridge.env
