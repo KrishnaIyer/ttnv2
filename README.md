@@ -19,6 +19,8 @@ This is based on [this](https://www.thethingsnetwork.org/article/deploying-a-pri
   ```
   $ docker-compose up -d
   ```
+  
+### Setting up the CLI (ttnctl)
 * Copy `$ROOT/keys/discovery/server.cert` to the config folder of `ttnctl` as `ca.cert` (default `$HOME/.ttnctl/ca.cert`)
 * Use the following config file for `ttnctl`:
 
@@ -29,6 +31,34 @@ handler-id: $NETWORK_ID-handler
 mqtt-address: localhost:1883
 debug: true
 ```
+
+## Basic Operations
+
+1. List all applications 
+  ```
+  $ ttnctl applications list
+  ```
+2. Select a particular application
+  ```
+  $ ttnctl applications select
+  ```
+3. Register the selected application to the handler
+  ```
+  $ ttnctl applications register
+  ```
+4. Register a device
+  ```
+  $ ttnctl device register <device-id> <DevEUI> <AppKey>
+  ```
+5. Subscrible to uplink traffic
+  ```
+  $ ttnctl subscribe
+  ```
+6. Send Downlinks
+  ```
+  $ ttnctl downlink <device-id> <payload> [--fport fPort]
+  ```
+
 
 ### Troubleshooting
 
