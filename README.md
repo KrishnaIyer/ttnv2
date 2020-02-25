@@ -64,7 +64,6 @@ debug: true
 
 * Sometimes, the handler cannot start streams with the broker. In this case, restart the handler a couple of times until the connection is successful
 * Since there's no console in this deployment, all the interaction is done via the [CLI(ttnctl)](https://www.thethingsnetwork.org/docs/network/cli/quick-start.html).
-* In order for the CLI to communicate with the stack components, you need to manually trust the discovery CA. For macOS, follow [this guide](https://tosbourn.com/getting-os-x-to-trust-self-signed-ssl-certificates/).
 
 
 ### Clean
